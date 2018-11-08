@@ -1,0 +1,106 @@
+[24-Jun-2014 09:11:05] PHP Parse error:  syntax error, unexpected T_EXIT, expecting T_STRING in /home/heinz/public_html/application/controllers/exit.php on line 3
+[24-Jun-2014 09:14:35] PHP Parse error:  syntax error, unexpected T_EXIT, expecting T_STRING in /home/heinz/public_html/application/controllers/exit.php on line 3
+[25-Jun-2014 13:17:34] PHP Fatal error:  Call to undefined method Canje_model::addCanje() in /home/heinz/public_html/application/controllers/canje_controller.php on line 13
+[25-Jun-2014 13:17:43] PHP Fatal error:  Call to undefined method Canje_model::addCanje() in /home/heinz/public_html/application/controllers/canje_controller.php on line 13
+[10-Sep-2014 12:46:46] PHP Parse error:  syntax error, unexpected '.' in /home/heinz/public_html/application/views/cart_view.php on line 28
+[10-Sep-2014 12:46:48] PHP Parse error:  syntax error, unexpected '.' in /home/heinz/public_html/application/views/cart_view.php on line 28
+[13-Oct-2017 14:54:28] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 109
+[13-Oct-2017 14:54:30] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 109
+[13-Oct-2017 14:54:31] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 109
+[13-Oct-2017 14:55:10] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 109
+[13-Oct-2017 14:57:31] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 108
+[13-Oct-2017 15:00:19] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 108
+[13-Oct-2017 15:00:24] PHP Parse error:  syntax error, unexpected $end in /home/heinz/public_html/application/models/canje_model.php on line 108
+[13-Oct-2017 15:14:41] PHP Parse error:  syntax error, unexpected T_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 55
+[13-Oct-2017 15:15:14] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/views/canjes_view.php on line 100
+[27-Oct-2017 21:23:48] PHP Parse error:  syntax error, unexpected '<' in /home/heinz/public_html/application/views/home_view.php on line 25
+[27-Oct-2017 21:56:01] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 58
+[27-Oct-2017 21:56:07] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 58
+[27-Oct-2017 21:56:41] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 58
+[27-Oct-2017 21:57:24] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 61
+[27-Oct-2017 21:59:54] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 56
+[27-Oct-2017 21:59:57] PHP Parse error:  syntax error, unexpected '}' in /home/heinz/public_html/application/controllers/login_controller.php on line 56
+[07-Nov-2017 13:52:04] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:52:47] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:33] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:43] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:45] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:46] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:46] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:46] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:53:47] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 103
+[07-Nov-2017 13:54:18] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 101
+[07-Nov-2017 13:57:30] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 102
+[07-Nov-2017 13:57:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 101
+[07-Nov-2017 13:57:49] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 101
+[07-Nov-2017 13:57:49] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 101
+[07-Nov-2017 13:57:50] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 101
+[07-Nov-2017 14:29:18] PHP Parse error:  syntax error, unexpected '$', expecting ',' or ';' in /home/heinz/public_html/application/views/CanjesRealizadosView.php on line 30
+[07-Nov-2017 14:29:55] PHP Parse error:  syntax error, unexpected '.', expecting T_VARIABLE or '$' in /home/heinz/public_html/application/views/CanjesRealizadosView.php on line 30
+[07-Nov-2017 14:38:05] PHP Parse error:  syntax error, unexpected '$', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 104
+[07-Nov-2017 14:38:49] PHP Parse error:  syntax error, unexpected '$', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 104
+[07-Nov-2017 14:38:49] PHP Parse error:  syntax error, unexpected '$', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 104
+[07-Nov-2017 14:39:05] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 100
+[07-Nov-2017 14:39:06] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 100
+[07-Nov-2017 14:45:43] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 102
+[07-Nov-2017 14:47:02] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 109
+[07-Nov-2017 14:47:21] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 109
+[07-Nov-2017 14:55:34] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 105
+[07-Nov-2017 14:58:51] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 105
+[07-Nov-2017 14:58:52] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 105
+[07-Nov-2017 15:08:33] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/heinz/public_html/application/views/home_view.php on line 108
+[28-Nov-2017 10:25:46] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 33
+[28-Nov-2017 10:25:50] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 33
+[28-Nov-2017 10:31:27] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 23
+[28-Nov-2017 10:32:46] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 23
+[28-Nov-2017 10:33:16] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 23
+[28-Nov-2017 10:33:17] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 23
+[28-Nov-2017 10:33:19] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/heinz/public_html/application/views/canjes_view.php on line 23
+[28-Nov-2017 10:36:31] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 36
+[28-Nov-2017 10:36:54] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:36:56] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:37:30] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:37:31] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:37:32] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:37:33] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:38:11] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:38:12] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:39:24] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 36
+[28-Nov-2017 10:41:14] PHP Parse error:  syntax error, unexpected '/' in /home/heinz/public_html/application/views/canjes_view.php on line 37
+[28-Nov-2017 10:43:18] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 36
+[28-Nov-2017 10:46:05] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/canjes_view.php on line 36
+[15-Jan-2018 14:18:39] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:18:40] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:18:42] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:18:45] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:18:46] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:18:47] PHP Fatal error:  Cannot redeclare Canje_controller::PuntosObtenidosXmes() in /home/heinz/public_html/application/controllers/canje_controller.php on line 125
+[15-Jan-2018 14:54:47] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/ParticipantesActivos.php on line 21
+[15-Jan-2018 14:54:51] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/heinz/public_html/application/views/ParticipantesActivos.php on line 21
+[13-Feb-2018 08:31:01] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[13-Feb-2018 14:51:00] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[24-Mar-2018 05:45:55] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[09-Apr-2018 20:57:07] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[09-Apr-2018 20:57:18] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[14-May-2018 22:14:29] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[15-May-2018 00:05:53] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[17-Jul-2018 23:12:54] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[17-Jul-2018 23:14:36] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[18-Jul-2018 04:40:43] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[18-Jul-2018 04:40:43] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[29-Jul-2018 18:00:47] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[29-Jul-2018 18:00:48] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[31-Jul-2018 19:12:11] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[31-Jul-2018 19:12:12] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[01-Aug-2018 04:18:56] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[01-Aug-2018 04:19:00] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[01-Aug-2018 07:47:11] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[01-Aug-2018 07:47:17] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[12-Aug-2018 22:29:07] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[12-Aug-2018 22:29:08] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[20-Aug-2018 15:22:39] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[20-Aug-2018 15:22:39] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[21-Aug-2018 07:40:51] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[21-Aug-2018 07:40:54] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[26-Sep-2018 19:47:40] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174
+[26-Sep-2018 19:47:40] PHP Fatal error:  Cannot redeclare class Admin in /home/heinz/public_html/application/models/admin.php on line 174

@@ -1,0 +1,112 @@
+/*Color de fondo y estilo de letra*/
+.bodyLogin{
+    background: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    
+}
+/*Color labels para los forms*/
+.textLabelLogin{
+    color: #004B94;
+    
+}
+/*Color de boton entrar*/
+.btn-primary{
+    
+    background: #004B94;
+}
+/*Color de borde de los inputs*/
+.form-control {
+border-color: #F6B53D;
+}
+
+
+
+/***********************************************/
+/*navbar*/
+
+.NavColorReglas{
+    
+    background:#f6b53d; 
+}
+
+.HeadTables{
+ background:#E21D26; 
+}
+.NavColor{
+    
+    background:#E21D26; 
+}
+/*body-home*/
+.bodyhome{
+    
+    background: #F0B92B;
+     font-family: 'Roboto', sans-serif;
+}
+.btn-light:hover{
+    background: #f2f2f2;
+  border-color: #004B94; 
+      color: #fff;
+
+}
+
+
+/*BOTONERA*/
+.btn-light { 
+  background: #004B94;
+ border-color: #004B94; 
+    color: #fff;
+}
+.btn-light:hover{
+    background: #004B94;
+    border-color: #004B94; 
+      color: #fff;
+
+
+}
+
+
+.style_prevu_kit:hover
+{
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+.style_prevu_kit
+{
+    display:inline-block;
+    border:0;
+    width:150px;
+    height:150px;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+
+
+/**********************CAR*/
+.btn-light:active{
+      background: #004B94;
+    border-color: #004B94; 
+      color: #fff;
+
+
+}
+
+
+/****** canjes tabla****/
+
+

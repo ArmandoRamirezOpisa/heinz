@@ -1,0 +1,78 @@
+html, body{width:100%;height:100%;margin:0;padding:0;background:#fcf6b9;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
+a{text-decoration:none}
+.imgGallery{max-width:171px;max-height:180px;}
+#cont{width:100%;height:100%;position:absolute;top:0;left:0}
+    #header{width:100%;height:20%;background:#801414;position: relative;}
+    #logo{width:20%;height:45%;position:absolute;top:5%;left:50%;margin-left:-10%;z-index:100;text-align:center;}
+        .imgLogo{width:100%;max-height:100%;position:absolute;top:0;left:0}
+    #bann{width:50%;height:25%;position:absolute;top:23%;left:50%;margin-left:-25%;border:2px solid #fcd981;
+          border-radius:25px;background-position: center center;background: radial-gradient(circle, #fbedc8, #fab914);
+          -moz-box-shadow: 0 0 5px 5px #CCC;-webkit-box-shadow: 0 0 5px 5px#CCC;box-shadow: 0 0 5px 5px #CCC;}
+          
+    #botonera{width:60%;height:100%;position:absolute;top:20%;left:50%;margin-left:-30%;}
+        .btn_m{width:23%;height:100%;position:absolute;top:0;background:#f5802a;border-radius:18px}
+        .btn1{left:0;}
+        .btn2{left:25.6%;}
+        .btn3{left:51.2%;}
+        .btn4{left:76.8%}
+        
+        .btnTit{background:#801414;color:#fff;width:100%;height:15%;position:absolute;left:0;top:65%;padding-top:4%;font-size:16px;}
+        .imgBtn{position:absolute;width:50%;height:auto;top:10%;left:50%;margin-left:-25%;}
+            .imgInBtna{width:100%;height:auto;}
+    
+    #dvSecc{width:90%;height:auto;min-height:30%;text-align:center;position:absolute;left:5%;top:50%;}
+    
+    .thHeadCart{text-align:center;background:#801414;color:#FFF;}
+    
+    #dvDatUser{height:100px;width:auto;position:absolute;left:10px;margin-top:5px;top:0;text-align:left;color:#FFF;}
+    
+    #headBut{position:absolute;width:30%;height:50px;left:10px;top:100%;margin-top:-50px;z-index:100;}
+    .btn-orange{background:#f5802a;color:#FFF;}
+    
+    #mnuMobile{display:none;position:absolute;left:5px;top:100%;margin-top:-40px;z-index:1000;}
+    
+    .contLogin{margin-top:5%;width:50%;background:url("../images/f2.png"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;}
+    
+    #dvProd{position:absolute;height:100%;width:30%;top:0;left:0;background:url("../images/f3.png");-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;
+            border-bottom-left-radius:25px;}
+    
+    #dvPrem{position:absolute;height:100%;width:30%;top:0;right:0;background:url("../images/f4.png");-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;
+        border-bottom-right-radius:25px;}
+        
+    .tblTP{border:1px solid;border-spacing: 5px 5px; border-collapse: separate}    
+    .thTP{background:#ea3611;color:#FFF;text-align:center;}
+    .tdTP{background:#e4581d;color:#FFF;}
+    .tdTP2{background:#f07b1c;color:#FFF;}
+    
+    #footer{position:fixed;background:#000;bottom:0;left:0;height:35px;width:100%;text-align:center;color:#f07b1c;padding-top:5px;}
+    
+    #dvFace{position:absolute;right:0;width:50px;height:auto}
+        #imgFace{width:40px;height:40px;margin:5px 5px 0 0;}
+        
+    #selProd{display:none}
+
+    #exit{position:absolute;width:60px;height:27px;padding-top:3px;bottom:5px;right:10px;text-align:center;background:#fab914;color:#FFF;}
+
+    .dvProductsMin{max-height:180px;max-width:260px;}
+    @media only screen and (max-device-width: 480px){
+        #logo{width:50%;height:50%;position:absolute;top:5%;left:50%;margin-left:-25%;z-index:100;text-align:center;}
+            .imgLogo{width:100%;height:auto;max-height:100%;position:absolute;top:0;left:0}
+        #bann{width:90%;height:25%;position:absolute;top:23%;left:50%;margin-left:-45%;border:2px solid #fcd981;background:#fab914;}
+        
+        #dvSecc{min-height:20%;}
+        
+        #botonera{width:90%;margin-left:-45%;margin-top:20px;}
+        .btn_m{border-radius:5px}
+        
+        .imgBtn{position:absolute;width:60%;height:auto;top:10%;left:50%;margin-left:-30%;}
+        .btnTit{background:#424242;color:#fff;width:100%;height:15%;position:absolute;left:0;top:45%;padding-top:4%;font-size:5px;}
+        
+        .contLogin{width:100%;}
+        
+        #headBut{display:none}
+        #mnuMobile{display: block;}
+        #selProd{display:block}
+        #mnuProd{display: none;}
+        
+        #dvEc{display:none}
+    }

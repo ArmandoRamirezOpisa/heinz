@@ -1,0 +1,6 @@
+[24-Jun-2014 09:11:05] PHP Parse error:  syntax error, unexpected T_EXIT, expecting T_STRING in /home/heinz/public_html/application/controllers/exit.php on line 3
+[24-Jun-2014 09:14:35] PHP Parse error:  syntax error, unexpected T_EXIT, expecting T_STRING in /home/heinz/public_html/application/controllers/exit.php on line 3
+[25-Jun-2014 13:17:34] PHP Fatal error:  Call to undefined method Canje_model::addCanje() in /home/heinz/public_html/application/controllers/canje_controller.php on line 13
+[25-Jun-2014 13:17:43] PHP Fatal error:  Call to undefined method Canje_model::addCanje() in /home/heinz/public_html/application/controllers/canje_controller.php on line 13
+[10-Sep-2014 12:46:46] PHP Parse error:  syntax error, unexpected '.' in /home/heinz/public_html/application/views/cart_view.php on line 28
+[10-Sep-2014 12:46:48] PHP Parse error:  syntax error, unexpected '.' in /home/heinz/public_html/application/views/cart_view.php on line 28
