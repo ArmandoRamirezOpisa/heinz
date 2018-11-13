@@ -20,22 +20,15 @@
     <div class="container">
 
         <div class="row justify-content-center">
-
             <div class="col-12 col-md-6">
                 <img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-
-
-
             </div>
-
         </div>
-
 
         <div class="row justify-content-center">
 
-
-
             <div class="col-12 col-md-4">
+
                 <form class="form-group">
                     <label for="usuario" class="textLabelLogin font-weight-bold">Usuario (Ingrese sin el guion)</label>
                     <input type="text" class="form-control form-control-sm" placeholder="Usuario (Ingrese sin el guion (-))" required="" autofocus="" type="email" name="usuario" id="usuario">
@@ -46,22 +39,19 @@
                     <input type="password" class="form-control form-control-sm" placeholder="Contrase&ntilde;a" required="" type="password" name="password" id="password">
                 </form>
 
-               <a class="btn btn-primary text-center btn-block" href="javascript:void(0)" onClick="valLogin()" role="button"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Entrar</a>
-              
+                <!-- <a class="btn btn-primary text-center btn-block" href="javascript:void(0)" onClick="valLogin()" role="button"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Entrar</a> -->
+                <button class="btn btn-primary text-center btn-block" onClick="valLogin()" type="button"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Entrar</button>
+
                 <small class="form-text text-muted text-center">  
-Para una correcta visualizaci?n del sitio se recomienda el uso de
-Chrome, Firefox, Internet Explorer 11 o superio
-</small>
-
-
+                    Para una correcta visualizaci?n del sitio se recomienda el uso de
+                    Chrome, Firefox, Internet Explorer 11 o superio
+                </small>
 
             </div>
+
         </div>
 
-
-
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -75,4 +65,4 @@ Chrome, Firefox, Internet Explorer 11 o superio
 
 </body>
 
-  </html>
+</html>

@@ -9,8 +9,6 @@
                 $this->load->model("admin");
         }
         
-        
-        
         function CanjesRealizados()
         {
             $misCanjesRealizados = $this->admin->misCanjesRealizados();
