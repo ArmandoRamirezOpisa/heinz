@@ -53,9 +53,9 @@
 				<form class="form-inline my-2 my-lg-0">
 					<div class="dropdown">
                         <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i> Usuario</button>
+                            <i class="fa fa-user-circle-o"></i> Usuario</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="javascript:void(0)" onClick = "exit()">Cerrar sesion</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#salirPuntosHeinz">Cerrar sesion</a>
                         </div>
                     </div>
 
@@ -72,9 +72,31 @@
             </div>
             <div class="row mt-5 headerColor fixed-bottom bg-dark justify-content-center mt-5">
                 <div class="col-auto">
-                    <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')"" class="text-center text-white">Aviso de privacidad</a>
+                    <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')" class="text-center text-white">Aviso de privacidad</a>
                 </div>
             </div>
+
+        <!-- Modal Cerrar Salir --> 
+        <div class="modal fade" id="salirPuntosHeinz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Seguro que quieres salir?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary cursor" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary cursor" onClick = "exit()">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin modal cerrar salir -->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
