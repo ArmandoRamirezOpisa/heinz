@@ -16,7 +16,7 @@
     </head>
     <body class="bodyHome">
         <!--<div class="container-fluid">-->
-        <nav class="navbar navbar-expand-lg navbar-light color-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar">
 			<a class="navbar-brand" href="http://puntosheinz.com.mx/">
 				<img src="assets/images/kraft.png" width="120" height="30" alt="">
 			</a>

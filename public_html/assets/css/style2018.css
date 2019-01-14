@@ -123,20 +123,15 @@
 
 .color-navbar {
     background-color: #E21D26;
+    position: absolute;
 }
 
 .colorMenu {
     color: #FFFFFF;
 }
 
-
-/*.colorMenu:hover{
-    color:#000000;
-}*/
-
 .btn-option:hover {
     background-color: #004B94;
-    //color:#cccccc;
     border-radius: 7px;
 }
 
