@@ -8,6 +8,8 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link href="assets/css/style2018.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/docsearch.min.css">
+        <link rel="stylesheet" href="assets/css/docs.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <script src="https://use.fontawesome.com/1f2183b84e.js"></script>
         <link rel="shortcut icon" href="assets/images/kraft.png" />
@@ -15,53 +17,56 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.js"></script>
     </head>
     <body class="bodyHome">
-        <!--<div class="container-fluid">-->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar">
-			<a class="navbar-brand" href="http://puntosheinz.com.mx/">
-				<img src="assets/images/kraft.png" width="120" height="30" alt="">
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#"><span class="colorMenu">Saldo</span><span class="badge badge-warning"><?php echo number_format($this->session->userdata('puntos')); ?></span></a>
-					</li>
-					<li class="nav-item btn-option">
-					<a class="nav-link" href="javascript:void(0)" onclick="loadSection('cart_controller/showContentCart','dvSecc')"><span class="colorMenu"><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i>Carrito</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link btn-option" href="javascript:void(0)" onclick="loadSection('reglas_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-list-alt mr-2" aria-hidden="true"></i>Reglas</span></a>
-					</li>
-					<li class="nav-item btn-option">
-					<a class="nav-link" href="javascript:void(0)" onclick="loadSection('producto_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-bullseye mr-2" aria-hidden="true"></i>Productos</span></a>
-					</li>
-					<li class="nav-item btn-option">
-						<a class="nav-link" href="javascript:void(0)" onclick="loadSection('cart_controller/getCategory','dvSecc')"><span class="colorMenu"><i class="fa fa-gift mr-2" aria-hidden="true"></i>Premios</span></a>
-					</li>
-					<li class="nav-item btn-option">
-					<a class="nav-link" href="javascript:void(0)" onclick="loadSection('canje_controller/getCanjes','dvSecc')"><span class="colorMenu"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>Movimientos</span></a>
-					</li>
-					<li class="nav-item btn-option">
-						<a class="nav-link" href="javascript:void(0)" onclick="loadSection('cuenta_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-eye mr-2" aria-hidden="true"></i>Estado de cuenta</span></a>
-					</li>
-					<li class="nav-item">
-						<div class="fb-like mt-1" data-href="https://www.facebook.com/Puntos-Heinz-380709378734414/?ref=br_rs" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-					</li>
-				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<div class="dropdown">
-                        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user-circle-o"></i> Usuario</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#salirPuntosHeinz">Cerrar sesion</a>
+        
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar">
+                <a class="navbar-brand" href="http://puntosheinz.com.mx/">
+					<img src="assets/images/kraft.png" width="120" height="30" alt="">
+				</a>
+			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+					    <li class="nav-item">
+						    <a class="nav-link" href="#"><span class="colorMenu">Saldo</span><span class="badge badge-warning"><?php echo number_format($this->session->userdata('puntos')); ?></span></a>
+					    </li>
+					    <li class="nav-item btn-option">
+					        <a class="nav-link" href="javascript:void(0)" onclick="loadSection('cart_controller/showContentCart','dvSecc')"><span class="colorMenu"><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i>Carrito</span></a>
+					    </li>
+					    <li class="nav-item">
+						    <a class="nav-link btn-option" href="javascript:void(0)" onclick="loadSection('reglas_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-list-alt mr-2" aria-hidden="true"></i>Reglas</span></a>
+					    </li>
+					    <li class="nav-item btn-option">
+					        <a class="nav-link" href="javascript:void(0)" onclick="loadSection('producto_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-bullseye mr-2" aria-hidden="true"></i>Productos</span></a>
+					    </li>
+					    <li class="nav-item btn-option">
+						    <a class="nav-link" href="javascript:void(0)" onclick="loadSection('cart_controller/getCategory','dvSecc')"><span class="colorMenu"><i class="fa fa-gift mr-2" aria-hidden="true"></i>Premios</span></a>
+					    </li>
+					    <li class="nav-item btn-option">
+					        <a class="nav-link" href="javascript:void(0)" onclick="loadSection('canje_controller/getCanjes','dvSecc')"><span class="colorMenu"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>Movimientos</span></a>
+					    </li>
+					    <li class="nav-item btn-option">
+						    <a class="nav-link" href="javascript:void(0)" onclick="loadSection('cuenta_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-eye mr-2" aria-hidden="true"></i>Estado de cuenta</span></a>
+					    </li>
+					    <li class="nav-item">
+						    <div class="fb-like mt-1" data-href="https://www.facebook.com/Puntos-Heinz-380709378734414/?ref=br_rs" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+					    </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0">
+					    <div class="dropdown">
+                            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-circle-o"></i> Usuario</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#salirPuntosHeinz">Cerrar sesion</a>
+                            </div>
                         </div>
-                    </div>
 
-				</form>
-			</div>
-		</nav>
+				    </form>
+			    </div>
+		    </nav>
+        </header>
+
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-4 mt-4">
                     <img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">

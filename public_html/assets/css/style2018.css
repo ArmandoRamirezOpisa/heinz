@@ -123,7 +123,6 @@
 
 .color-navbar {
     background-color: #E21D26;
-    position: absolute;
 }
 
 .colorMenu {
@@ -133,6 +132,21 @@
 .btn-option:hover {
     background-color: #004B94;
     border-radius: 7px;
+}
+
+.sizeAviso {
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: -15px;
+}
+
+.menu-lateral {
+    padding-top: 59px;
+}
+
+.bd-sidebar {
+    order: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 
