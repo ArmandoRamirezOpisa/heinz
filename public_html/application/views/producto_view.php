@@ -1,4 +1,9 @@
-<div class="container">
+<div class="container" style="margin-bottom:100px;">
+        <div class="row justify-content-center mt-5">
+		<div class="col-12 col-md-4 mt-4">
+			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
+		</div>
+	</div>
         <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-9 ">
                         <div class="card-deck  mt-3 ">

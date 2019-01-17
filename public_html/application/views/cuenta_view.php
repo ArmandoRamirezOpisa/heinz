@@ -1,3 +1,11 @@
+<div class="container" style="margin-bottom:100px;">
+
+<div class="row justify-content-center mt-5">
+		<div class="col-12 col-md-4 mt-4">
+			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
+		</div>
+	</div>
+
 <table class="table table-striped">
     <thead class="thead-dark">
         <th class="thTP">Fecha</th>
@@ -22,3 +30,5 @@
         ?>
     </tbody>
 </table>
+
+</div>
