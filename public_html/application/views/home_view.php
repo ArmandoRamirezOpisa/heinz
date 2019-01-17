@@ -2,10 +2,8 @@
 <html lang="es">
     <head>
         <title>Puntos Heinz</title>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link href="assets/css/style2018.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/docsearch.min.css">
@@ -17,15 +15,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.js"></script>
     </head>
     <body class="bodyHome">
-        
+        <!-- menu principal -->
         <header>
             <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar">
                 <a class="navbar-brand" href="http://puntosheinz.com.mx/">
 					<img src="assets/images/kraft.png" width="120" height="30" alt="">
 				</a>
-			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-			    </button>
+			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-toggle="tooltip" title="Ver menu" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				    <ul class="navbar-nav mr-auto">
 					    <li class="nav-item">
@@ -34,7 +32,7 @@
 					    <li class="nav-item btn-option">
 					        <a class="nav-link" href="javascript:void(0)" onclick="loadSection('cart_controller/showContentCart','dvSecc')"><span class="colorMenu"><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i>Carrito</span></a>
 					    </li>
-					    <li class="nav-item">
+					    <li class="nav-item btn-option">
 						    <a class="nav-link btn-option" href="javascript:void(0)" onclick="loadSection('reglas_controller','dvSecc')"><span class="colorMenu"><i class="fa fa-list-alt mr-2" aria-hidden="true"></i>Reglas</span></a>
 					    </li>
 					    <li class="nav-item btn-option">
@@ -61,13 +59,25 @@
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#salirPuntosHeinz">Cerrar sesion</a>
                             </div>
                         </div>
-
 				    </form>
 			    </div>
 		    </nav>
         </header>
+        <!-- Fin menu principal -->
+        <div class="container-fluid" style="padding-top:60px;">
+            <!-- Div que va a ir cambiando para mostrar diferentes elementos -->
+            
+            <div id="dvSecc" class="row flex-xl-nowrap"></div>
 
-            <div class="row justify-content-center mt-5">
+            <div class="row mt-5 headerColor fixed-bottom bg-dark justify-content-center mt-5">
+                <div class="col-auto">
+                    <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')" class="text-center text-white">Aviso de privacidad</a>
+                </div>
+            </div>
+        </div>
+
+            <!--Version antes puntos heinz-->
+            <!--<div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-4 mt-4">
                     <img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
                 </div>
@@ -79,7 +89,8 @@
                 <div class="col-auto">
                     <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')" class="text-center text-white">Aviso de privacidad</a>
                 </div>
-            </div>
+            </div>-->
+            <!--Fin version antes puntos heinz-->
 
         <!-- Modal Cerrar Salir --> 
         <div class="modal fade" id="salirPuntosHeinz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
