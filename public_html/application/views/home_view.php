@@ -76,22 +76,6 @@
             </div>
         </div>
 
-            <!--Version antes puntos heinz-->
-            <!--<div class="row justify-content-center mt-5">
-                <div class="col-12 col-md-4 mt-4">
-                    <img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col" id="dvSecc"></div>
-            </div>
-            <div class="row mt-5 headerColor fixed-bottom bg-dark justify-content-center mt-5">
-                <div class="col-auto">
-                    <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')" class="text-center text-white">Aviso de privacidad</a>
-                </div>
-            </div>-->
-            <!--Fin version antes puntos heinz-->
-
         <!-- Modal Cerrar Salir --> 
         <div class="modal fade" id="salirPuntosHeinz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

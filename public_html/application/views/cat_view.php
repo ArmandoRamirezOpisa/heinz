@@ -34,35 +34,6 @@
 
 </main>
 
-
-
-
-
-
-<!--<div class="row">
-      <div id="mnuProd" class="col-md-2">
-        <div class="list-group" style="text-align: left;">
-        empieza php
-            if($cat)
-            {
-                foreach($cat as $row)
-                {
-                    $act = "";
-                    if ($row["CodCategoria"] == 1)
-                    {
-                        $act = "active";
-                    }
-                    echo '<a id="a'.$row["CodCategoria"].'" href="javascript:void(0)" onClick="selCat('.$row["CodCategoria"].',\'a'.$row["CodCategoria"].'\')" class="list-group-item '.$act.'" >'.$row["nbCategoria"].'</a>';
-                }
-            }
-        termina php
-        </div>
-      </div>
-      <div id="dvContAw" class="col-md-10"></div>
-    </div>-->
-
-
-
 <script>
     var dAct = "a1";
     function selCat(idCat,id)
