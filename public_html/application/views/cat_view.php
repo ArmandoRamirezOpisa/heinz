@@ -12,7 +12,7 @@
                     if ($row["CodCategoria"] == 1){
                         $act = "active";
                     }
-                    echo '<div class="list-group-item '.$act.'">
+                    echo '<div class="list-group-item">
 						<a id="a'.$row["CodCategoria"].'" class="bd-toc-link" href="javascript:void(0)" onClick="selCat('.$row["CodCategoria"].',\'a'.$row["CodCategoria"].'\')">'.$row["nbCategoria"].'</a>
                     </div>';
                 }
