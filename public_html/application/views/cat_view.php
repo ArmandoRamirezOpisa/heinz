@@ -21,14 +21,31 @@
     </nav>
 </div>
 <!-- Fin div sidebar o menu-lateral -->
+
+<!-- Imagen lateral -->
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+	<ul class="section-nav">
+		<li class="toc-entry toc-h2">
+			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
+		</li>
+        <li class="toc-entry toc-h2">
+			<p>Para dudas y aclaraciones favor de comunicarse a:</p>
+		</li>
+		<li class="toc-entry toc-h2">
+			<p>operaciones@opisa.com</p>
+		</li>
+	</ul>
+</div>
+<!-- Fin imagen lateral -->
+
 <!-- cards de todo lo que se va a mostrar -->
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-    <div class="row justify-content-center mt-5">
+    <!--<div class="row justify-content-center mt-5">
 	    <div class="col-12 col-md-4 mt-4">
 			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
 		</div>
-	</div>
+	</div>-->
 
     <div id="dvContAw" class="row"></div>
 

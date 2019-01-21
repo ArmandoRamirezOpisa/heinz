@@ -90,7 +90,7 @@
                         Seguro que quieres salir?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary cursor" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary cursor" data-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-primary cursor" onClick = "exit()">Salir</button>
                     </div>
                 </div>
