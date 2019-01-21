@@ -20,13 +20,17 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-4">
-                    <form class="form-group">
+                    <form>
+
+                    <div class="form-group">
                         <label for="usuario" class="textLabelLogin font-weight-bold"><strong>Usuario</strong></label>
                         <input type="text" class="form-control form-control-sm" placeholder="Usuario (Ingrese sin el guion (-))" required="" autofocus="" type="email" name="usuario" id="usuario">
-                    </form>
-                    <form class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="password" class="textLabelLogin font-weight-bold"><strong>Contrase&ntilde;a</strong></label>
                         <input type="password" class="form-control form-control-sm" placeholder="Contrase&ntilde;a" required="" type="password" name="password" id="password">
+                    </div>
+
                     </form>
                     <button class="btn btn-primary text-center btn-block cursor" onClick="valLogin()" type="button"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Entrar</button>
                     <small class="form-text text-muted text-center">  
