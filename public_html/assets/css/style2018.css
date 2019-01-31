@@ -149,5 +149,14 @@
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
+.eleminiarItemHeinz {
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+.eleminiarItemHeinz:hover {
+    font-size: 15px;
+}
+
 
 /* fin nuevos estilos */

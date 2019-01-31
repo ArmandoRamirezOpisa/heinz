@@ -4,23 +4,17 @@
     	   
         public function __construct()
         {
-                parent::__construct();
-                $this->load->library('email');
-                $this->load->model("canje_model");
+            parent::__construct();
+            $this->load->library('email');
+            $this->load->model("canje_model");
         }
         
-        function addCanje()
-        {
+        function addCanje(){
             $data = json_decode(stripslashes($_POST['data']));//Decodifica JSON
-            //var_dump($data);
-			
    	        $idCanje = $this->canje_model->addCanje();//
-            
-            if ($idCanje)
-            {
+            if ($idCanje){
                 $detCanje = $this->canje_model->addDetCanje($data,$idCanje);
                 $updateSaldo = $this->canje_model->updSaldo($_POST["ptsCanje"]);
-                
                 if ($updateSaldo)
                 {
                     $sdoAct = $this->session->userdata('puntos') - $_POST["ptsCanje"];

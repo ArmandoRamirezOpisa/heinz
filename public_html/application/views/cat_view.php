@@ -12,7 +12,7 @@
                     if ($row["CodCategoria"] == 1){
                         $act = "active";
                     }
-                    echo '<div class="list-group-item">
+                    echo '<div class="list-group-item '.$act.'">
 						<a id="a'.$row["CodCategoria"].'" class="bd-toc-link" href="javascript:void(0)" onClick="selCat('.$row["CodCategoria"].',\'a'.$row["CodCategoria"].'\')">'.$row["nbCategoria"].'</a>
                     </div>';
                 }
@@ -40,12 +40,6 @@
 
 <!-- cards de todo lo que se va a mostrar -->
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
-    <!--<div class="row justify-content-center mt-5">
-	    <div class="col-12 col-md-4 mt-4">
-			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-		</div>
-	</div>-->
 
     <div id="dvContAw" class="row"></div>
 

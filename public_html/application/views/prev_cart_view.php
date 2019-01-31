@@ -1,26 +1,4 @@
-<!-- Imagen lateral -->
-<div class="d-none d-xl-block col-xl-2 bd-toc">
-	<ul class="section-nav">
-		<li class="toc-entry toc-h2">
-			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-		</li>
-		<li class="toc-entry toc-h2">
-			<p>Para dudas y aclaraciones favor de comunicarse a:</p>
-		</li>
-		<li class="toc-entry toc-h2">
-			<p>operaciones@opisa.com</p>
-		</li>
-	</ul>
-</div>
-<!-- Fin imagen lateral -->
-
 <div class="container" style="margin-bottom:100px;">
-
-	<!--<div class="row justify-content-center mt-5">
-		<div class="col-12 col-md-4 mt-4">
-			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-		</div>
-	</div>-->
 
 	<div class="row">
 		<div class="col-sm"></div>
@@ -88,7 +66,7 @@
 			ctd = "";
 			c = 0;
 		}
-		str += "<tr "+ctd+"><td>"+v.id+"</td><td>"+v.nombre+"</td><td>"+v.cantidad+"</td><td>"+formatNumber.new(v.puntos)+"</td><td><a onClick='deleteItem("+v.id+")'>Eliminar</a></td></tr>";
+		str += "<tr "+ctd+"><td>"+v.id+"</td><td>"+v.nombre+"</td><td>"+v.cantidad+"</td><td>"+formatNumber.new(v.puntos)+"</td><td><a class='badge badge-warning eleminiarItemHeinz' onClick='deleteItem("+v.id+")'><i class='fa fa-trash'></i> Eliminar</a></td></tr>";
 		
 		$("#bodyContentCart").html(str);
 	});

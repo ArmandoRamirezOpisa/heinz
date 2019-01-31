@@ -45,48 +45,28 @@ var formatNumber = {
 
 
 function addItemOrder(idProduct, name, puntos) {
-
-
     var cantidadArt = document.getElementById("productoCantidad").value;
-
     if (parseInt(cantidadArt) == 0) {
-
         $.notify("Es necesario elegir una cantidad. Intente nuevamente.", "error");
     } else {
-
-
-
-
-        //console.log("Agregar:"+idProduct+"-"+name+"-"+puntos);
-        ////////////////
         var exist = 0;
-        //Arma array de productos seleccionados, si el id seleccionado ya se encuentra en el array lo elimina del mismo.
         numE = contOrder.length;
-
         if (numE == 0) {
-            //Si el array esta vacío agrega el id en la posicion 0
             contOrder = [{
                 "id": idProduct,
                 "cantidad": cantidadArt,
                 "nombre": name,
                 "puntos": puntos * cantidadArt
             }];
-
-            //console.log("Agrega id "+contOrder[0].id+" al array de la orden. Cantidad: "+contOrder[0].cantidad+" Nombre:"+contOrder[0].nombre+" Puntos:"+contOrder[0].puntos);
         } else {
-            //A partir del segundo elemento se verifica si existe en el array, si existe se le suma 1 a la cantidad.
             $.each(contOrder, function(k, v) {
                 if (v.id == idProduct) {
-                    //console.log("Existe el id "+v.id+", se suma uno a la cantidad:"+v.cantidad);
                     v.cantidad = parseInt(v.cantidad) + parseInt(cantidadArt);
                     v.puntos = parseInt(v.puntos) + puntos * cantidadArt;
                     exist = 1;
                 }
             });
-
-            //Si no existe en el array se agrega un nuevo elemento con cantidad 1
             if (exist == 0) {
-                //console.log("Se inserta el id "+idProduct+" como un nuevo elemento al array");
                 contOrder.push({
                     "id": idProduct,
                     "cantidad": cantidadArt,
@@ -96,10 +76,7 @@ function addItemOrder(idProduct, name, puntos) {
             }
         }
         loadSection("cart_controller/showContentCart/", "dvContAw");
-
-
         $.notify("Se ha agregado el producto a su orden", "success");
-        //console.log("Total de elementos en array: "+contOrder.length);
     }
 }
 
@@ -156,28 +133,26 @@ function showDet(id) {
 }
 
 function sendCanje($ptsUser, $ptsCanje) {
-
-
     periodoCanjes = 1;
     if (periodoCanjes == 1) {
         $("#btnGenCanje").hide();
         $("#lblProc").show();
-
         if ($ptsUser >= $ptsCanje) {
             var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
-
             $.ajax({
                 type: 'POST',
                 url: "canje_controller/addCanje",
                 dataType: "json",
                 data: { "data": jsonString, "ptsCanje": $ptsCanje },
                 beforeSend: function() {
-                    //console.log('Procesando, espere por favor...');
+                    console.log('Procesando, espere por favor...');
                 },
                 success: function(response) {
                     if (response) {
                         $.notify("La solicitud de canje ha sido almacenada .", "success");
                         //delArray();//Elimina el contenido del array
+                        var el = document.getElementById('btn');
+                        el.parentNode.removeChild(el);
                         setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
                     } else {
                         $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");

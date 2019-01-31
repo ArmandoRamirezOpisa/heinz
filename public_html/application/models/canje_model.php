@@ -1,67 +1,54 @@
 <?php
-    class Canje_model extends CI_Model {
+        class Canje_model extends CI_Model {
     	
-    	public function __construct()//
-    	{
-    		
-    	}
+    	        public function __construct(){}
         
-        public function addCanje()
-        {
-    		$query = $this->db->query("
-                                         INSERT INTO PreCanje
-                                         (codPrograma,idParticipante,noTipoEntrega)
-                                         VALUES (".$this->session->userdata('programa').",".$this->session->userdata('idPart').",1
-                                         )   
-                                      ");
-    		if ($query)
-    		{
-                        return $this->db->insert_id();
-    		}else{
-                        return false;
-    		}  
-        }
+                public function addCanje(){
+    		        $query = $this->db->query("
+                                INSERT INTO PreCanje
+                                (codPrograma,idParticipante,noTipoEntrega)
+                                VALUES (".$this->session->userdata('programa').",".$this->session->userdata('idPart').",1)
+                        ");
+    		        if ($query){
+                                return $this->db->insert_id();
+    		        }else{
+                                return false;
+    		        }  
+                }
         
-        public function addDetCanje($datos,$noFolio)
-        {
-        	$err = 0;
-			$nItem = 1;
-			foreach($datos as $d)
-			{
-	    		$query = $this->db->query("
-                                                    INSERT INTO PreCanjeDet (idParticipante,noFolio,idPreCanjeDet,CodPremio,cantidad,PuntosXUnidad)
-	    					    VALUES (".$this->session->userdata('idPart').",".$noFolio.",".$nItem.",".$d->id.",".$d->cantidad.",".$d->puntos."/".$d->cantidad.")
-	                                      ");
-				if (!$query)
-				{
+                public function addDetCanje($datos,$noFolio){
+        	        $err = 0;
+		        $nItem = 1;
+			foreach($datos as $d){
+	    		        $query = $this->db->query("
+                                        INSERT INTO PreCanjeDet (idParticipante,noFolio,idPreCanjeDet,CodPremio,cantidad,PuntosXUnidad)
+                                        VALUES (".$this->session->userdata('idPart').",".$noFolio.",".$nItem.",".$d->id.",".$d->cantidad.",".$d->puntos."/".$d->cantidad.")
+	                        ");
+				if (!$query){
 					$err ++;
 				}else{
 					$nItem++;
 				}
 			}
-			
-			if ($err > 0)
-			{
-				return false;
+			if ($err > 0){
+			        return false;
 			}
 			return true;
-        }
+                }
         
-        public function updSaldo($ptsCanje)
-        {
-        
-    		$query = $this->db->query("
-    					UPDATE Participante 
-                                        SET SaldoActual = SaldoActual - ".$ptsCanje."
-                                        WHERE idParticipante = ".$this->session->userdata('idPart')
-                                      );
+                public function updSaldo($ptsCanje){
+    		        $query = $this->db->query("
+                                UPDATE Participante 
+                                SET SaldoActual = SaldoActual - ".$ptsCanje."
+                                WHERE idParticipante = ".$this->session->userdata('idPart')
+                        );
 			if ($query)
 			{
 				return true;
 			}else{
 				return false;
 			}
-        }
+                }
 
         public function misPreCanjes()
         {
