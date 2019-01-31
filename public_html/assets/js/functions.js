@@ -94,30 +94,42 @@ function refreshCar() {
     showOrderContent(0);
 }
 
-function deleteItem(item) {
-    var r = confirm("Eliminara el producto seleccionado ¿Desae continuar?")
-    if (r == true) {
-        //console.log("Eliminara: "+item);
-        $.each(contOrder, function(k, v) {
-            if (item == v.id) {
-                contOrder.splice(k, 1);
-                //console.log("Elimino: "+item);
-                loadSection("cart_controller/showContentCart/", "dvContAw");
-                $.notify("Se ha eliminado el producto de su orden", "success");
-                return false;
-            }
-        });
-        if (contOrder.length == 0) {
-            $('#dvContOrder').modal('hide')
-            $("#dvCar").html('');
-            bloqueaCombos(0);
-            //console.log("Orden elimiada");
-            //console.log("No.Contenido: "+contOrder.length);
-        } else {
-            showOrderContent(0);
-        }
+function deleteItemModal(itemId) {
 
+    var newid = document.getElementById('eliminarProductoBtn').id = itemId;
+}
+
+function deleteItemCancelar() {
+    var newid = document.getElementById('eliminarProductoBtn').id = "";
+}
+
+function deleteItem(item1) {
+    var item = item1.id;
+    //var r = confirm("Eliminara el producto seleccionado ¿Desae continuar?")
+    //if (r == true) {
+    //console.log("Eliminara: "+item);
+    $.each(contOrder, function(k, v) {
+        if (item == v.id) {
+            contOrder.splice(k, 1);
+            //console.log("Elimino: "+item);
+            loadSection("cart_controller/showContentCart/", "dvContAw");
+            $.notify("Se ha eliminado el producto de su orden", "success");
+            return false;
+        }
+    });
+    if (contOrder.length == 0) {
+        $('#dvContOrder').modal('hide')
+        $("#dvCar").html('');
+        bloqueaCombos(0);
+        //console.log("Orden elimiada");
+        //console.log("No.Contenido: "+contOrder.length);
     }
+    /*else {
+           showOrderContent(0);
+       }*/
+    //$('#eliminarItemHeinz').modal('hide');
+    //}
+    var newid = document.getElementById(item).id = "eliminarProductoBtn";
 }
 
 function delArray() {
@@ -153,7 +165,7 @@ function sendCanje($ptsUser, $ptsCanje) {
                         //delArray();//Elimina el contenido del array
                         var el = document.getElementById('btn');
                         el.parentNode.removeChild(el);
-                        setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
+                        //setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
                     } else {
                         $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
                         $("#btnGenCanje").show();

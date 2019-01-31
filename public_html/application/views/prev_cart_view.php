@@ -49,7 +49,29 @@
 	</div>
 
 </div>
-   
+  
+<!-- Modal -->
+<div class="modal fade" id="eliminarItemHeinz" tabindex="-1" role="dialog" aria-labelledby="eliminarItemHeinz" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eliminarItemHeinz">Eliminar producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  	Eliminara el producto seleccionado ¿Desea continuar?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="eliminarProductoBtn" type="button" class="btn btn-primary" onclick="deleteItem(this)" data-dismiss="modal">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
 	var str = "";
 	var c = 1;
@@ -66,7 +88,7 @@
 			ctd = "";
 			c = 0;
 		}
-		str += "<tr "+ctd+"><td>"+v.id+"</td><td>"+v.nombre+"</td><td>"+v.cantidad+"</td><td>"+formatNumber.new(v.puntos)+"</td><td><a class='badge badge-warning eleminiarItemHeinz' onClick='deleteItem("+v.id+")'><i class='fa fa-trash'></i> Eliminar</a></td></tr>";
+		str += "<tr "+ctd+"><td>"+v.id+"</td><td>"+v.nombre+"</td><td>"+v.cantidad+"</td><td>"+formatNumber.new(v.puntos)+"</td><td><a class='badge badge-warning eleminiarItemHeinz' onClick='deleteItemModal("+v.id+")' data-toggle='modal' data-target='#eliminarItemHeinz'><i class='fa fa-trash'></i> Eliminar</a></td></tr>";
 		
 		$("#bodyContentCart").html(str);
 	});
