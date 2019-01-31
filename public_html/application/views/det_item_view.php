@@ -14,7 +14,7 @@
                     <p style="text-align:center">'.$row["Caracts_Esp"].'</p>
                     <p class="font-weight-bold">Cantidad : <input type="number" placeholder="cantidad" min="0" max="100" 
                         id="productoCantidad" value="1" class="form-control col-md-3 text-center"></p>
-                    <p><a class="btn btn-light text-white" onClick = "addItemOrder('.$row["codPremio"].',\''.str_replace('"',' ',$row["Nombre_Esp"]).'\','.$row["ValorPuntos"].')"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a></p>
+                    <p><a class="btn btn-light text-white addItemHeinz" onClick = "addItemOrder('.$row["codPremio"].',\''.str_replace('"',' ',$row["Nombre_Esp"]).'\','.$row["ValorPuntos"].')"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a></p>
                 </div>';
             } 
         }

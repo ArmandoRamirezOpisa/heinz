@@ -158,5 +158,13 @@
     font-size: 15px;
 }
 
+.addItemHeinz {
+    cursor: pointer;
+}
+
+.addItemHeinz:hover {
+    background-color: #0069D9;
+}
+
 
 /* fin nuevos estilos */
