@@ -10,23 +10,29 @@
         
         function addCanje(){
             $data = json_decode(stripslashes($_POST['data']));//Decodifica JSON
-   	        $idCanje = $this->canje_model->addCanje();//
-            if ($idCanje){
-                $detCanje = $this->canje_model->addDetCanje($data,$idCanje);
-                $updateSaldo = $this->canje_model->updSaldo($_POST["ptsCanje"]);
-                if ($updateSaldo)
-                {
-                    $sdoAct = $this->session->userdata('puntos') - $_POST["ptsCanje"];
-                    $this->session->set_userdata('puntos', $sdoAct);
+
+            $fecha = date("Y-m-d");
+            if ($fecha < '2019-02-28'){
+
+                $idCanje = $this->canje_model->addCanje();//
+                if ($idCanje){
+                    $detCanje = $this->canje_model->addDetCanje($data,$idCanje);
+                    $updateSaldo = $this->canje_model->updSaldo($_POST["ptsCanje"]);
+                    if ($updateSaldo){
+                        $sdoAct = $this->session->userdata('puntos') - $_POST["ptsCanje"];
+                        $this->session->set_userdata('puntos', $sdoAct);
+                    }
+                    if ($detCanje){
+                        //Envía mail de confirmación de canje
+                        $this->sendCanjeMail($idCanje,$data);
+                        $this->output->set_output(json_encode($idCanje));    
+                    }
+                }else{
+                    $this->output->set_output(json_encode(false));
                 }
-                if ($detCanje)
-                {
-                    //Envía mail de confirmación de canje
-                    $this->sendCanjeMail($idCanje,$data);
-                    $this->output->set_output(json_encode($idCanje));    
-                }
+
             }else{
-                $this->output->set_output(json_encode(false));
+                $this->output->set_output(json_encode("ceroCanjes"));
             }
         }
         

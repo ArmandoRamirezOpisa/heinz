@@ -13,7 +13,7 @@
                                 return $this->db->insert_id();
     		        }else{
                                 return false;
-    		        }  
+    		        }
                 }
         
                 public function addDetCanje($datos,$noFolio){

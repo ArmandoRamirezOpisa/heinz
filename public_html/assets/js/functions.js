@@ -166,6 +166,10 @@ function sendCanje($ptsUser, $ptsCanje) {
                         $.notify("La solicitud de canje ha sido almacenada .", "success");
                         var el = document.getElementById('btn');
                         el.parentNode.removeChild(el);
+                    } else if (response == "ceroCanjes") {
+                        $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
+                        var el = document.getElementById('btn');
+                        el.parentNode.removeChild(el);
                     } else {
                         $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
                         $("#btnGenCanje").show();
