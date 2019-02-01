@@ -81,58 +81,38 @@ function addItemOrder(idProduct, name, puntos) {
 }
 
 function refreshCar() {
-    //Actualiza las cantidades de los productos en el array
-    //console.log("Refresca array");
     $.each(contOrder, function(k, v) {
         if ($("#in" + v.id).val() == 0) {
             alert("La cantidad indicada debe ser mayor a cero");
         } else {
             v.cantidad = $("#in" + v.id).val();
-            //console.log("Asigna al id: "+v.id+ "la cantidad: "+v.cantidad);
         }
     });
     showOrderContent(0);
 }
 
 function deleteItemModal(itemId) {
-
-    //55
     var idEliminarModal = itemId;
-    //55-e
     var valorE = idEliminarModal + "-" + "e";
     var idBtnModalEliminar = valorE;
-    console.log(idBtnModalEliminar);
-    //55-3
     document.getElementById('eliminarProductoBtn-e').id = idBtnModalEliminar;
 
-    //55-c
     var valorC = idEliminarModal + "-" + "c";
-    var idBtnModalCancelar = valorC
-    console.log(idBtnModalCancelar);
-    //55-c
+    var idBtnModalCancelar = valorC;
     document.getElementById('eliminarProductoBtn-c').id = idBtnModalCancelar;
 
     document.getElementById('codPremioModal').innerHTML = idEliminarModal;
 }
 
 function deleteItemCancelar(idCancelar) {
-
-    //55-c
     var cancelarId = idCancelar.id;
-    //5 - c
     var cancelarIdArray = cancelarId.split("-");
-    //eliminarProductoBtn-e
     var btnCancelarNewId = "eliminarProductoBtn" + "-" + cancelarIdArray[1];
-    console.log(btnCancelarNewId);
-
     document.getElementById(cancelarId).id = btnCancelarNewId;
 
-    //eliminarProductoBtn-e
     var btnCancelarNewId = "eliminarProductoBtn" + "-" + "e";
-    //55-e
     var idEliminarModal = cancelarIdArray[0] + "-" + "e";
     document.getElementById(idEliminarModal).id = btnCancelarNewId;
-
 }
 
 function deleteItem(item1) {
@@ -140,13 +120,9 @@ function deleteItem(item1) {
     var itemArray = item.split("-");
     var itemNum = itemArray[0];
     console.log(itemNum);
-    //var r = confirm("Eliminara el producto seleccionado ¿Desae continuar?")
-    //if (r == true) {
-    //console.log("Eliminara: "+item);
     $.each(contOrder, function(k, v) {
         if (itemNum == v.id) {
             contOrder.splice(k, 1);
-            //console.log("Elimino: "+item);
             loadSection("cart_controller/showContentCart/", "dvContAw");
             $.notify("Se ha eliminado el producto de su orden", "success");
             return false;
@@ -156,23 +132,14 @@ function deleteItem(item1) {
         $('#dvContOrder').modal('hide')
         $("#dvCar").html('');
         bloqueaCombos(0);
-        //console.log("Orden elimiada");
-        //console.log("No.Contenido: "+contOrder.length);
     }
-    /*else {
-           showOrderContent(0);
-       }*/
-    //$('#eliminarItemHeinz').modal('hide');
-    //}
     document.getElementById(item).id = "eliminarProductoBtn-e";
 }
 
 function delArray() {
-    //Elimina todo el contenido del carrito//
     $.each(contOrder, function(k, v) {
         contOrder.splice(k, 1);
     });
-    //confirmDelArray();
 }
 
 function showDet(id) {
@@ -197,10 +164,8 @@ function sendCanje($ptsUser, $ptsCanje) {
                 success: function(response) {
                     if (response) {
                         $.notify("La solicitud de canje ha sido almacenada .", "success");
-                        //delArray();//Elimina el contenido del array
                         var el = document.getElementById('btn');
                         el.parentNode.removeChild(el);
-                        //setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
                     } else {
                         $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
                         $("#btnGenCanje").show();
@@ -221,7 +186,6 @@ function sendCanje($ptsUser, $ptsCanje) {
     } else {
         $.notify("No es posible realizar el proceso de canje.", "error");
     }
-
 }
 
 function up() {
