@@ -96,20 +96,53 @@ function refreshCar() {
 
 function deleteItemModal(itemId) {
 
-    var newid = document.getElementById('eliminarProductoBtn').id = itemId;
+    //55
+    var idEliminarModal = itemId;
+    //55-e
+    var valorE = idEliminarModal + "-" + "e";
+    var idBtnModalEliminar = valorE;
+    console.log(idBtnModalEliminar);
+    //55-3
+    document.getElementById('eliminarProductoBtn-e').id = idBtnModalEliminar;
+
+    //55-c
+    var valorC = idEliminarModal + "-" + "c";
+    var idBtnModalCancelar = valorC
+    console.log(idBtnModalCancelar);
+    //55-c
+    document.getElementById('eliminarProductoBtn-c').id = idBtnModalCancelar;
 }
 
-function deleteItemCancelar() {
-    var newid = document.getElementById('eliminarProductoBtn').id = "";
+function deleteItemCancelar(idCancelar) {
+
+    //55-c
+    var cancelarId = idCancelar.id;
+    //5 - c
+    var cancelarIdArray = cancelarId.split("-");
+    //eliminarProductoBtn-e
+    var btnCancelarNewId = "eliminarProductoBtn" + "-" + cancelarIdArray[1];
+    console.log(btnCancelarNewId);
+
+    document.getElementById(cancelarId).id = btnCancelarNewId;
+
+    //eliminarProductoBtn-e
+    var btnCancelarNewId = "eliminarProductoBtn" + "-" + "e";
+    //55-e
+    var idEliminarModal = cancelarIdArray[0] + "-" + "e";
+    document.getElementById(idEliminarModal).id = btnCancelarNewId;
+
 }
 
 function deleteItem(item1) {
     var item = item1.id;
+    var itemArray = item.split("-");
+    var itemNum = itemArray[0];
+    console.log(itemNum);
     //var r = confirm("Eliminara el producto seleccionado ¿Desae continuar?")
     //if (r == true) {
     //console.log("Eliminara: "+item);
     $.each(contOrder, function(k, v) {
-        if (item == v.id) {
+        if (itemNum == v.id) {
             contOrder.splice(k, 1);
             //console.log("Elimino: "+item);
             loadSection("cart_controller/showContentCart/", "dvContAw");
@@ -129,7 +162,7 @@ function deleteItem(item1) {
        }*/
     //$('#eliminarItemHeinz').modal('hide');
     //}
-    var newid = document.getElementById(item).id = "eliminarProductoBtn";
+    document.getElementById(item).id = "eliminarProductoBtn-e";
 }
 
 function delArray() {

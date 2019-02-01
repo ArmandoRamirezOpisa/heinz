@@ -64,8 +64,8 @@
 	  	Eliminara el producto seleccionado ¿Desea continuar?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button id="eliminarProductoBtn" type="button" class="btn btn-primary" onclick="deleteItem(this)" data-dismiss="modal">Eliminar</button>
+        <button id="eliminarProductoBtn-c" type="button" class="btn btn-secondary" onclick="deleteItemCancelar(this)" data-dismiss="modal">Cancelar</button>
+        <button id="eliminarProductoBtn-e" type="button" class="btn btn-primary" onclick="deleteItem(this)" data-dismiss="modal">Eliminar</button>
       </div>
     </div>
   </div>
