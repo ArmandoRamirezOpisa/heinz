@@ -61,7 +61,7 @@
         </button>
       </div>
       <div class="modal-body">
-	  	Eliminara el producto seleccionado ¿Desea continuar?
+	  		¿Desea eliminar el producto con el codigo <span id="codPremioModal"></span>?
       </div>
       <div class="modal-footer">
         <button id="eliminarProductoBtn-c" type="button" class="btn btn-secondary" onclick="deleteItemCancelar(this)" data-dismiss="modal">Cancelar</button>

@@ -111,6 +111,8 @@ function deleteItemModal(itemId) {
     console.log(idBtnModalCancelar);
     //55-c
     document.getElementById('eliminarProductoBtn-c').id = idBtnModalCancelar;
+
+    document.getElementById('codPremioModal').innerHTML = idEliminarModal;
 }
 
 function deleteItemCancelar(idCancelar) {
