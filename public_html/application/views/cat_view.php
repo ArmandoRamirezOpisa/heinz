@@ -32,7 +32,7 @@
 			<p>Para dudas y aclaraciones favor de comunicarse a:</p>
 		</li>
 		<li class="toc-entry toc-h2">
-			<p>operaciones@opisa.com</p>
+			<p><strong>operaciones@opisa.com</strong></p>
 		</li>
 	</ul>
 </div>
