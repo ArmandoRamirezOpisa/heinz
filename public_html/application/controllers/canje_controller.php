@@ -11,8 +11,12 @@
         function addCanje(){
             $data = json_decode(stripslashes($_POST['data']));//Decodifica JSON
 
+            $detCanje = $this->canje_model->fhExpira43();
+
+            $fechaExpira = $detCanje[0]['FechaFin'];
+
             $fecha = date("Y-m-d");
-            if ($fecha < '2019-02-28'){
+            if ($fecha < $fechaExpira){
 
                 $idCanje = $this->canje_model->addCanje();//
                 if ($idCanje){
