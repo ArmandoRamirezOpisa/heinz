@@ -54,7 +54,7 @@
 				    <form class="form-inline my-2 my-lg-0">
 					    <div class="dropdown">
                             <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user-circle-o"></i> Usuario</button>
+                                <i class="fa fa-user-circle-o"></i> <?php echo $this->session->userdata('nombre'); ?></button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#salirPuntosHeinz">Cerrar sesion</a>
                             </div>
