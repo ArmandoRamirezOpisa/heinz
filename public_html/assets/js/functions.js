@@ -148,11 +148,10 @@ function showDet(id) {
 }
 
 function sendCanje($ptsUser, $ptsCanje) {
-    var el = document.getElementById( 'btnFinalizarCompraHeinz' );
+    var el = document.getElementById('btnFinalizarCompraHeinz');
 		el.parentNode.removeChild(el);
     periodoCanjes = 1;
     if (periodoCanjes == 1) {
-        $("#btnCanjeFinalizar").hide();
         $("#lblProc").show();
         if ($ptsUser >= $ptsCanje) {
             var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
