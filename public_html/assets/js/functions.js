@@ -125,6 +125,7 @@ function deleteItem(item1) {
             contOrder.splice(k, 1);
             loadSection("cart_controller/showContentCart/", "dvContAw");
             $.notify("Se ha eliminado el producto de su orden", "success");
+            window.location.reload();
             return false;
         }
     });
@@ -165,7 +166,7 @@ function sendCanje($ptsUser, $ptsCanje) {
                 },
                 success: function(response) {
                     if (response) {
-                        //$("#lblProc").hide();
+                        $("#btnFinalizarCompraHeinz").hide();
                         window.location.reload();
                         //$.notify("La solicitud de canje ha sido almacenada .", "success");
                     } else if (response == "ceroCanjes") {
