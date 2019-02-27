@@ -147,9 +147,11 @@ function showDet(id) {
 }
 
 function sendCanje($ptsUser, $ptsCanje) {
+    var el = document.getElementById( 'btnFinalizarCompraHeinz' );
+		el.parentNode.removeChild(el);
     periodoCanjes = 1;
     if (periodoCanjes == 1) {
-        $("#btnGenCanje").hide();
+        $("#btnCanjeFinalizar").hide();
         $("#lblProc").show();
         if ($ptsUser >= $ptsCanje) {
             var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
@@ -163,9 +165,9 @@ function sendCanje($ptsUser, $ptsCanje) {
                 },
                 success: function(response) {
                     if (response) {
-                        $.notify("La solicitud de canje ha sido almacenada .", "success");
-                        var el = document.getElementById('btn');
-                        el.parentNode.removeChild(el);
+                        //$("#lblProc").hide();
+                        window.location.reload();
+                        //$.notify("La solicitud de canje ha sido almacenada .", "success");
                     } else if (response == "ceroCanjes") {
                         $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
                         var el = document.getElementById('btn');

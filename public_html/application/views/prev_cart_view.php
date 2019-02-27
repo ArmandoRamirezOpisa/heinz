@@ -42,8 +42,8 @@
 
 		<a href="javascript:void(0)" onclick="loadSection('cart_controller/getCategory','dvSecc')" class="btn btn-primary" id="btnGenCanje">Continuar comprando<i class="fa fa-share ml-2" aria-hidden="true"></i></a>
 
-		<span id="btn">
-    		<a href="javascript:void(0)" onclick="sendCanje(<?php echo $this->session->userdata('puntos'); ?>,totPuntos)" class="btn btn-success" id="btnGenCanje">Finalizar compra <i class="fa fa-paper-plane ml-2" aria-hidden="true"></i></a>
+		<span id="btnFinalizarCompraHeinz">
+    		<a href="javascript:void(0)" onclick="sendCanje(<?php echo $this->session->userdata('puntos'); ?>,totPuntos)" class="btn btn-success" id="btnCanjeFinalizar">Finalizar compra <i class="fa fa-paper-plane ml-2" aria-hidden="true"></i></a>
 		</span>
 
 	</div>
@@ -96,7 +96,7 @@
 	$('#totalCarrito').html(formatNumber.new(totPuntos))
 
 	if (totPuntos == 0){
-		var el = document.getElementById( 'btn' );
+		var el = document.getElementById( 'btnFinalizarCompraHeinz' );
 		el.parentNode.removeChild(el);
 	}
 </script>
