@@ -149,7 +149,7 @@ function showDet(id) {
 
 function sendCanje($ptsUser, $ptsCanje) {
     var el = document.getElementById('btnFinalizarCompraHeinz');
-		el.parentNode.removeChild(el);
+    el.parentNode.removeChild(el);
     periodoCanjes = 1;
     if (periodoCanjes == 1) {
         $("#lblProc").show();
@@ -166,8 +166,8 @@ function sendCanje($ptsUser, $ptsCanje) {
                 success: function(response) {
                     if (response) {
                         $("#btnFinalizarCompraHeinz").hide();
-                        window.location.reload();
-                        //$.notify("La solicitud de canje ha sido almacenada .", "success");
+                        $.notify("La solicitud de canje ha sido almacenada .", "success");
+                        setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
                     } else if (response == "ceroCanjes") {
                         $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
                         var el = document.getElementById('btn');

@@ -42,6 +42,12 @@
 
 		<a href="javascript:void(0)" onclick="loadSection('cart_controller/getCategory','dvSecc')" class="btn btn-primary" id="btnGenCanje">Continuar comprando<i class="fa fa-share ml-2" aria-hidden="true"></i></a>
 
+		<div class="alert alert-warning mt-5" role="alert">
+  		Por motivos de seguridad favor de solo dar un solo click al boton de finalizar compra.
+			<hr>
+			De esta forma te podremos ofrecer un mejor sevicio.
+		</div>
+
 		<span id="btnFinalizarCompraHeinz" style="diplay:none;">
     		<a href="javascript:void(0)" onclick="sendCanje(<?php echo $this->session->userdata('puntos'); ?>,totPuntos)" class="btn btn-success" id="btnCanjeFinalizar">Finalizar compra <i class="fa fa-paper-plane ml-2" aria-hidden="true"></i></a>
 		</span>
