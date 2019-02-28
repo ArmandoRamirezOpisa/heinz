@@ -1,5 +1,6 @@
 //Globales
 var contOrder = new Array();
+var clicks = 0;
 
 function loadSection(controller, divSel) //Controlador,Div en el que se despliega la vista
 {
@@ -148,49 +149,56 @@ function showDet(id) {
 }
 
 function sendCanje($ptsUser, $ptsCanje) {
-    var el = document.getElementById('btnFinalizarCompraHeinz');
-    el.parentNode.removeChild(el);
-    periodoCanjes = 1;
-    if (periodoCanjes == 1) {
-        $("#lblProc").show();
-        if ($ptsUser >= $ptsCanje) {
-            var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
-            $.ajax({
-                type: 'POST',
-                url: "canje_controller/addCanje",
-                dataType: "json",
-                data: { "data": jsonString, "ptsCanje": $ptsCanje },
-                beforeSend: function() {
-                    console.log('Procesando, espere por favor...');
-                },
-                success: function(response) {
-                    if (response) {
-                        $("#btnFinalizarCompraHeinz").hide();
-                        $.notify("La solicitud de canje ha sido almacenada .", "success");
-                        setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
-                    } else if (response == "ceroCanjes") {
-                        $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
-                        var el = document.getElementById('btn');
-                        el.parentNode.removeChild(el);
-                    } else {
-                        $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
+    clicks++;
+    if (clicks == 1) {
+
+        var el = document.getElementById('btnFinalizarCompraHeinz');
+        el.parentNode.removeChild(el);
+        periodoCanjes = 1;
+        if (periodoCanjes == 1) {
+            $("#lblProc").show();
+            if ($ptsUser >= $ptsCanje) {
+                var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
+                $.ajax({
+                    type: 'POST',
+                    url: "canje_controller/addCanje",
+                    dataType: "json",
+                    data: { "data": jsonString, "ptsCanje": $ptsCanje },
+                    beforeSend: function() {
+                        console.log('Procesando, espere por favor...');
+                    },
+                    success: function(response) {
+                        if (response) {
+                            $("#btnFinalizarCompraHeinz").hide();
+                            $.notify("La solicitud de canje ha sido almacenada .", "success");
+                            setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
+                        } else if (response == "ceroCanjes") {
+                            $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
+                            var el = document.getElementById('btn');
+                            el.parentNode.removeChild(el);
+                        } else {
+                            $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
+                            $("#btnGenCanje").show();
+                            $("#lblProc").hide();
+                        }
+                    },
+                    error: function(x, e) {
+                        alert("Ocurrio un error al realizar el canje:" + e.messager);
                         $("#btnGenCanje").show();
                         $("#lblProc").hide();
                     }
-                },
-                error: function(x, e) {
-                    alert("Ocurrio un error al realizar el canje:" + e.messager);
-                    $("#btnGenCanje").show();
-                    $("#lblProc").hide();
-                }
-            });
+                });
+            } else {
+                $.notify("Su saldo es insuficiente para realizar este canje.", "error");
+                $("#btnGenCanje").show();
+                $("#lblProc").hide();
+            }
         } else {
-            $.notify("Su saldo es insuficiente para realizar este canje.", "error");
-            $("#btnGenCanje").show();
-            $("#lblProc").hide();
+            $.notify("No es posible realizar el proceso de canje.", "error");
         }
+
     } else {
-        $.notify("No es posible realizar el proceso de canje.", "error");
+        $.notify("Unicamente se debe de dar un click al boton.", "error");
     }
 }
 
