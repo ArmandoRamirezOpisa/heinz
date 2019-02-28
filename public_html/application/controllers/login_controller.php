@@ -15,6 +15,7 @@
 				$userData = array(
 			       'logged_in' => TRUE,
                     'nombre' => $login[0]["PrimerNombre"]." ".$login[0]["ApellidoPaterno"],
+                    'eMail' => $login[0]["eMail"],
                     'programa' => $login[0]["codPrograma"],
                     'participante' => $login[0]["codParticipante"],
                     'empresa' => $login[0]["codEmpresa"],
