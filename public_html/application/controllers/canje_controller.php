@@ -534,28 +534,6 @@
                         </body>
                     </html>';
 
-            //Correo de prueba cuerpo
-            /*$message = "<h1>Puntos Heinz</h1>
-                <h2>SE HA GENERADO EL CANJE CON FOLIO: ".$idCanje."</h2>
-                <table>
-                    <tr><td>ID PARTICIPANTE: </td><td style='font-weight'>".$this->session->userdata('idPart')."</td></tr>
-                    <tr><td>NOMBRE: </td><td style='font-weight'>".$this->session->userdata('nombre')."</td></tr>
-                    <tr><td>COD. PARTICIPANTE: </td><td style='font-weight'>".$this->session->userdata('participante')."</td></tr>
-                    <tr><td>COD. EMPRESA: </td><td style='font-weight'>".$this->session->userdata('empresa')."</td></tr>
-                </table>
-                <h3>Productos</h3>
-                <table>";
-            foreach($datos as $d){
-                $message.="<tr>
-                    <td>Artículo:</td><td>".$d->id."</td>
-                    <td>Desc:</td><td>".$d->nombre."</td>
-                    <td>Cantidad:</td><td>".$d->cantidad."</td>
-                    <td>Puntos:</td><td>".number_format($d->puntos)."</td>
-                </tr>";
-            }               
-            $message .= "</table>";*/
-            //fin del correo de prueba cuerpo
-
             //Inicializa
             $this->email->initialize($config);
             //Envío de alerta de canje.
