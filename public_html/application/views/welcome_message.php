@@ -73,7 +73,7 @@
 	}
 	</style>
 </head>
-<body>
+<body onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
 
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>

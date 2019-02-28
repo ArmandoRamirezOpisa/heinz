@@ -17,7 +17,7 @@
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?a" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
  	
     
     <div class="container contLogin">
@@ -59,9 +59,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/notify.js"></script>
-    <script src="assets/js/functions.js"></script>
-    <script src="assets/js/login.js"></script>
+    <script src="assets/js/notify.js?a"></script>
+    <script src="assets/js/functions.js?a"></script>
+    <script src="assets/js/login.js?a"></script>
     
   </body>
 </html>
