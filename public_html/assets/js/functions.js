@@ -171,7 +171,7 @@ function sendCanje($ptsUser, $ptsCanje) {
                         if (response) {
                             $("#btnFinalizarCompraHeinz").hide();
                             $.notify("La solicitud de canje ha sido almacenada .", "success");
-                            setTimeout(function() { location.href = "http://www.puntosheinz.com.mx"; }, 3000);
+                            location.reload();
                         } else if (response == "ceroCanjes") {
                             $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
                             var el = document.getElementById('btn');
