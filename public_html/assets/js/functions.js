@@ -170,13 +170,15 @@ function sendCanje($ptsUser, $ptsCanje) {
                     success: function(response) {
                         if (response) {
                             $("#btnFinalizarCompraHeinz").hide();
+                            $('#lblProc').hide();
                             $.notify("La solicitud de canje ha sido almacenada .", "success");
-                            location.reload();
+                            console.log(response);
+                            //location.reload();
                         } else if (response == "ceroCanjes") {
                             $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
                             var el = document.getElementById('btn');
                             el.parentNode.removeChild(el);
-                        } else {
+                        } else if (response == "0") {
                             $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
                             $("#btnGenCanje").show();
                             $("#lblProc").hide();

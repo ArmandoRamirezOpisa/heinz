@@ -32,11 +32,11 @@
                         $this->output->set_output(json_encode($idCanje));    
                     }
                 }else{
-                    $this->output->set_output(json_encode(false));
+                    $this->output->set_output(json_encode(0));
                 }
 
             }else{
-                $this->output->set_output(json_encode("ceroCanjes"));
+                $this->output->set_output(json_encode(ceroCanjes));
             }
         }
         
