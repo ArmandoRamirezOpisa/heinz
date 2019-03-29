@@ -14,7 +14,7 @@
                         WHERE codPrograma = 43 
                         AND codEmpresa = ".$emp." 
                         AND codParticipante = ".$part." 
-                        AND pwd = '".$datos["password"]."' 
+                        AND pwd = md5('".$datos["password"]."')
                         AND Status = 1
                   ");
                   if ($query->num_rows() == 1){
