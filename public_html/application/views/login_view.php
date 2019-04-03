@@ -20,15 +20,15 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	    <script src="https://use.fontawesome.com/1f2183b84e.js"></script>
     </head>
-    <body class="bodyLogin" onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
-        <div class="container">
-            <div class="row justify-content-center">
+    <body class="bodyLogin animated apareciendo" onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
+        <div class="container animated apareciendo">
+            <div class="row justify-content-center animated apareciendo">
                 <div class="col-12 col-md-6">
                     <img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-4">
+            <div class="row justify-content-center animated apareciendo">
+                <div class="col-12 col-md-4 animated apareciendo">
                     <form>
 
                         <div class="form-group">
@@ -45,7 +45,7 @@
                     </form>
                     <small class="form-text text-muted text-center">  
                         Para una correcta visualizaci?n del sitio se recomienda el uso de
-                        Chrome, Firefox, Internet Explorer 11 o superio
+                        Chrome, Firefox, Safari, Opera
                     </small>
                 </div>
             </div>

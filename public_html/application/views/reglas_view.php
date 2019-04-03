@@ -1,5 +1,5 @@
 <!-- Imagen lateral -->
-<div class="d-none d-xl-block col-xl-2 bd-toc">
+<div class="d-none d-xl-block col-xl-2 bd-toc animated apareciendo">
 	<ul class="section-nav">
 		<li class="toc-entry toc-h2">
 			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
@@ -14,7 +14,7 @@
 </div>
 <!-- Fin imagen lateral -->
 
-<div class="container" style="margin-bottom:100px;">
+<div class="container animated apareciendo" style="margin-bottom:100px;margin-top:50px;">
 				
 	<!--<div class="row justify-content-center mt-5">
 		<div class="col-12 col-md-4 mt-4">

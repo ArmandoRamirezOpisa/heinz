@@ -1,4 +1,4 @@
-<div class="container" style="margin-bottom:100px;">
+<div class="container animated apareciendo" style="margin-bottom:100px;margin-top:50px;">
 
 	<div class="row">
 		<div class="col-sm"></div>

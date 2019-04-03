@@ -14,17 +14,11 @@
 </div>
 <!-- Fin imagen lateral -->
 
-<div class="container" style="margin-bottom:100px;">
+<div class="container animated apareciendo" style="margin-bottom:100px;margin-top:50px;">
 
-        <!--<div class="row justify-content-center mt-5">
-		<div class="col-12 col-md-4 mt-4">
-			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
-		</div>
-	</div>-->
-
-        <div class="row justify-content-center">
+        <div class="row justify-content-center animated apareciendo">
                 <div class="col-sm-12 col-md-9 ">
-                        <div class="card-deck  mt-3 ">
+                        <div class="card-deck  mt-3 animated apareciendo">
                                 <div class="card ">
                                         <img class="card-img-top" src="assets/images/2018/1.jpg" alt="Card image cap">
                                         <div class="card-body">
@@ -50,7 +44,7 @@
                                         </div> 
                                 </div>
                         </div>
-                        <div class="card-deck  mt-3">
+                        <div class="card-deck  mt-3 animated apareciendo">
                                 <div class="card">
                                         <img class="card-img-top" src="assets/images/2018/5.jpg" alt="Card image cap">
                                         <div class="card-body">
@@ -76,7 +70,7 @@
                                         </div>
                                 </div>
                         </div>
-                        <div class="card-deck  mt-3 ">
+                        <div class="card-deck  mt-3 animated apareciendo">
                                 <div class="card">
                                         <img class="card-img-top" src="assets/images/2018/9.jpg" alt="Card image cap">
                                         <div class="card-body">
@@ -102,7 +96,7 @@
                                         </div>
                                 </div>
                         </div>
-                        <div class="card-deck  mt-3">
+                        <div class="card-deck  mt-3 animated apareciendo">
                                 <div class="card">
                                         <img class="card-img-top" src="assets/images/2018/13.jpg" alt="Card image cap">
                                         <div class="card-body">
