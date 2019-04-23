@@ -23,7 +23,7 @@
 <!-- Fin div sidebar o menu-lateral -->
 
 <!-- Imagen lateral -->
-<div class="d-none d-xl-block col-xl-2 bd-toc animated apareciendo">
+<div class="d-none d-xl-block col-xl-2 bd-toc">
 	<ul class="section-nav">
 		<li class="toc-entry toc-h2">
 			<img src="assets/images/Logo_Login.png" class="img-fluid" alt="Responsive image">
@@ -39,7 +39,7 @@
 <!-- Fin imagen lateral -->
 
 <!-- cards de todo lo que se va a mostrar -->
-<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content animated apareciendo" role="main">
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
     <div id="dvContAw" class="row"></div>
 

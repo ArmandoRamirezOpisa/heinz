@@ -23,10 +23,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.js"></script>
     </head>
-    <body class="bodyHome animated apareciendo" onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
+    <body class="bodyHome" onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
         <!-- menu principal -->
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar animated apareciendo">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light color-navbar">
                 <a class="navbar-brand" href="http://puntosheinz.com.mx/">
 					<img src="assets/images/kraft.png" width="120" height="30" alt="">
 				</a>
@@ -78,7 +78,7 @@
             
             <div id="dvSecc" class="row flex-xl-nowrap"></div>
 
-            <div class="row mt-5 headerColor fixed-bottom bg-dark justify-content-center mt-5 animated apareciendo">
+            <div class="row mt-5 headerColor fixed-bottom bg-dark justify-content-center mt-5">
                 <div class="col-auto">
                     <a href="javascript:void(0)" onclick="loadSection('aviso_controller','dvSecc')" class="text-center text-white">Aviso de privacidad</a>
                 </div>
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Modal Cerrar Salir --> 
-        <div class="modal fade animated apareciendo" id="salirPuntosHeinz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="salirPuntosHeinz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
