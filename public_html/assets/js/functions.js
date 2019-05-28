@@ -1,9 +1,7 @@
-//Globales
 var contOrder = new Array();
 var clicks = 0;
 
-function loadSection(controller, divSel) //Controlador,Div en el que se despliega la vista
-{
+function loadSection(controller, divSel) {
     $.ajax({
         url: controller,
         async: 'true',
@@ -11,7 +9,7 @@ function loadSection(controller, divSel) //Controlador,Div en el que se desplieg
         contentType: "application/x-www-form-urlencoded",
         dataType: "html",
         error: function(object, error, anotherObject) {
-            alert('Mensaje: ' + object.statusText + 'Status: ' + object.status);
+            console.log(object);
         },
         global: true,
         ifModified: false,
@@ -25,8 +23,8 @@ function loadSection(controller, divSel) //Controlador,Div en el que se desplieg
 }
 
 var formatNumber = {
-    separador: ",", // separador para los miles
-    sepDecimal: '.', // separador para los decimales
+    separador: ",",
+    sepDecimal: '.',
     formatear: function(num) {
         num += '';
         var splitStr = num.split('.');
@@ -158,10 +156,10 @@ function sendCanje($ptsUser, $ptsCanje) {
         if (periodoCanjes == 1) {
             $("#lblProc").show();
             if ($ptsUser >= $ptsCanje) {
-                var jsonString = JSON.stringify(contOrder); //Pasa array a formato JSON
+                var jsonString = JSON.stringify(contOrder);
                 $.ajax({
                     type: 'POST',
-                    url: "canje_controller/addCanje",
+                    url: "Canje_controller/addCanje",
                     dataType: "json",
                     data: { "data": jsonString, "ptsCanje": $ptsCanje },
                     beforeSend: function() {
@@ -169,23 +167,24 @@ function sendCanje($ptsUser, $ptsCanje) {
                     },
                     success: function(response) {
                         if (response) {
-                            $("#btnFinalizarCompraHeinz").hide();
-                            $('#lblProc').hide();
-                            $.notify("La solicitud de canje ha sido almacenada .", "success");
                             console.log(response);
-                            //location.reload();
+                            //$("#btnFinalizarCompraHeinz").hide();
+                            //$('#lblProc').hide();
+                            //$.notify("La solicitud de canje ha sido almacenada .", "success");
                         } else if (response == "ceroCanjes") {
-                            $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
-                            var el = document.getElementById('btn');
-                            el.parentNode.removeChild(el);
+                            console.log(response);
+                            //$.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
+                            //var el = document.getElementById('btn');
+                            //el.parentNode.removeChild(el);
                         } else if (response == "0") {
-                            $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
-                            $("#btnGenCanje").show();
-                            $("#lblProc").hide();
+                            console.log(response);
+                            //$.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
+                            //$("#btnGenCanje").show();
+                            //$("#lblProc").hide();
                         }
                     },
                     error: function(x, e) {
-                        alert("Ocurrio un error al realizar el canje:" + e.messager);
+                        console.log("Ocurrio un error al realizar el canje:" + e, x);
                         $("#btnGenCanje").show();
                         $("#lblProc").hide();
                     }

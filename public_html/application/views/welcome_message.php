@@ -1,23 +1,15 @@
 <?php
-  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
-?>
-
-<!DOCTYPE html>
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
 	<title>Welcome to CodeIgniter</title>
 
 	<style type="text/css">
 
-	::selection{ background-color: #E13300; color: white; }
-	::moz-selection{ background-color: #E13300; color: white; }
-	::webkit-selection{ background-color: #E13300; color: white; }
+	::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
 
 	body {
 		background-color: #fff;
@@ -53,11 +45,11 @@
 		padding: 12px 10px 12px 10px;
 	}
 
-	#body{
+	#body {
 		margin: 0 15px 0 15px;
 	}
-	
-	p.footer{
+
+	p.footer {
 		text-align: right;
 		font-size: 11px;
 		border-top: 1px solid #D0D0D0;
@@ -65,15 +57,15 @@
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-	
-	#container{
+
+	#container {
 		margin: 10px;
 		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
+		box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
 </head>
-<body onLoad="if ('Navigator' == navigator.appName)document.forms[0].reset();">
+<body>
 
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
@@ -85,12 +77,12 @@
 		<code>application/views/welcome_message.php</code>
 
 		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
+		<code>application/controllers/Welcome.php</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
 </body>

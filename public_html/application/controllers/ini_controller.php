@@ -2,13 +2,11 @@
 
 class Ini_controller extends CI_Controller {
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('construction_view');
 	}
 	
-	public function home()
-	{     
+	public function home(){
 		$this->load->view('home_view');
 	}
 }

@@ -4,18 +4,12 @@
     	   
         public function __construct(){
             parent::__construct();
-            $this->load->model("cart_model");
+            $this->load->model("Cart_model");
         }
-		
-    	public function index(){
-    	    /*$pr = $this->cart_model->getAwards();
-    		$this->load->view('cart_view');*/
-    	}
         
         public function getCategory(){
-    	    $cat = $this->cart_model->getCategory();
-            if ($cat)
-            {
+    	    $cat = $this->Cart_model->getCategory();
+            if ($cat){
                 $data["cat"] = $cat;
             }else{
                 $data["cat"] = false;
@@ -24,9 +18,8 @@
         }
         
         public function getAwards($idCat){
-    	    $aw = $this->cart_model->getAwards($idCat);
-            if ($aw)
-            {
+    	    $aw = $this->Cart_model->getAwards($idCat);
+            if ($aw){
                 $data["awards"] = $aw;
             }else{
                 $data["awards"] = false;
@@ -35,9 +28,8 @@
         }
         
         public function showItem($id){
-    	    $item = $this->cart_model->getDataItem($id);
-            if ($item)
-            {
+    	    $item = $this->Cart_model->getDataItem($id);
+            if ($item){
                 $data["item"] = $item;
             }else{
                 $data["item"] = false;
@@ -49,5 +41,4 @@
 			$this->load->view('prev_cart_view');
 		}
     }
-
 ?>

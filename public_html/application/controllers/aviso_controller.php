@@ -2,10 +2,8 @@
 
     class Aviso_controller extends CI_Controller {
     
-    	public function index()
-    	{
+    	public function index(){
     		$this->load->view('aviso_view');
     	}
     }
-
 ?>

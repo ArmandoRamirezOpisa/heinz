@@ -2,30 +2,21 @@
 
     class Admin extends CI_Controller {
     	   
-        public function __construct()
-        {
-                parent::__construct();
-                $this->load->library('email');
-                $this->load->model("admin");
+        public function __construct(){
+            parent::__construct();
+            $this->load->library('email');
+            $this->load->model("Admin");
         }
         
-        function CanjesRealizados()
-        {
+        function CanjesRealizados(){
             $misCanjesRealizados = $this->admin->misCanjesRealizados();
-            //$misCanjes = $this->canje_model->misCanjes();
 
-           if ($misCanjesRealizados)
-            {
-               $data["precanjes"] = $misCanjesRealizados;
+            if ($misCanjesRealizados){
+                $data["precanjes"] = $misCanjesRealizados;
             }else{
                 $data["precanjes"] = false;
             }
-            
-
             $this->load->view('CanjesRealizadosView',$data);
-        }
-        
-       
-        }
-    
+        }   
+    }
 ?>

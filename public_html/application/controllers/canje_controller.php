@@ -5,29 +5,28 @@
         public function __construct(){
             parent::__construct();
             $this->load->library('email');
-            $this->load->model("canje_model");
+            $this->load->model("Canje_model");
         }
         
         function addCanje(){
-            $data = json_decode(stripslashes($_POST['data']));//Decodifica JSON
+            $data = json_decode(stripslashes($this->input->post('data')));
 
-            $detCanje = $this->canje_model->fhExpira43();
+            $detCanje = $this->Canje_model->fhExpira43();
 
             $fechaExpira = $detCanje[0]['FechaFin'];
 
             $fecha = date("Y-m-d");
             if ($fecha < $fechaExpira){
 
-                $idCanje = $this->canje_model->addCanje();//
+                $idCanje = $this->Canje_model->addCanje();
                 if ($idCanje){
-                    $detCanje = $this->canje_model->addDetCanje($data,$idCanje);
-                    $updateSaldo = $this->canje_model->updSaldo($_POST["ptsCanje"]);
+                    $detCanje = $this->Canje_model->addDetCanje($data,$idCanje);
+                    $updateSaldo = $this->Canje_model->updSaldo($this->input->post('ptsCanje'));
                     if ($updateSaldo){
-                        $sdoAct = $this->session->userdata('puntos') - $_POST["ptsCanje"];
+                        $sdoAct = $this->session->userdata('puntos') - $this->input->post('ptsCanje');
                         $this->session->set_userdata('puntos', $sdoAct);
                     }
                     if ($detCanje){
-                        //Envía mail de confirmación de canje
                         $this->sendCanjeMail($idCanje,$data);
                         $this->output->set_output(json_encode($idCanje));    
                     }
@@ -36,12 +35,12 @@
                 }
 
             }else{
-                $this->output->set_output(json_encode(ceroCanjes));
+                $this->output->set_output(json_encode("ceroCanjes"));
             }
         }
         
         function getCanjes(){
-            $misPreCanjes = $this->canje_model->misPreCanjes();
+            $misPreCanjes = $this->Canje_model->misPreCanjes();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -51,7 +50,7 @@
         }
 
         function getCanjesGlobales(){
-            $misPreCanjes = $this->canje_model->misCanjesGlobales();
+            $misPreCanjes = $this->Canje_model->misCanjesGlobales();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -61,7 +60,7 @@
         }
 
         function getParticipantesActivos(){
-            $misPreCanjes = $this->canje_model->ParticipantesActivos();
+            $misPreCanjes = $this->Canje_model->ParticipantesActivos();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -71,7 +70,7 @@
         }
 
         function getListaPremios(){
-            $misPreCanjes = $this->canje_model->ListaDePremios();
+            $misPreCanjes = $this->Canje_model->ListaDePremios();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -80,7 +79,7 @@
             $this->load->view('listaPremios',$data);
         }
         function PuntosObtenidosXmes(){
-            $misPreCanjes = $this->canje_model->PuntosObtenidosXmes();
+            $misPreCanjes = $this->Canje_model->PuntosObtenidosXmes();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -90,7 +89,7 @@
         }
 
         function PuntosRedimidos(){
-            $misPreCanjes = $this->canje_model->PuntosRedimidos();
+            $misPreCanjes = $this->Canje_model->PuntosRedimidos();
             if ($misPreCanjes){
                $data["precanjes"] = $misPreCanjes;
             }else{
@@ -100,10 +99,9 @@
         }
         
         function sendCanjeMail($idCanje = 0,$datos){
-            //Configuracion de SMTP
-            $config['smtp_host'] = 'm176.neubox.net';
-            $config['smtp_user'] = 'envios@opisa.com';//envios@opisa.com
-            $config['smtp_pass'] = '3hf89w';//3hf89w
+            $config['smtp_host'] = 'mail.opisa.com';
+            $config['smtp_user'] = 'envios@opisa.com';
+            $config['smtp_pass'] = '3hf89w';
             $config['smtp_port'] = 465;
             $config['mailtype'] = 'html';
             
@@ -536,9 +534,8 @@
 
             //Inicializa
             $this->email->initialize($config);
-            //Envío de alerta de canje.
             $this->email->from('no_reply@puntosheinz.com.mx', 'Puntos Heinz');
-            $this->email->to('operaciones@opisa.com');//operaciones@opisa.com
+            $this->email->to('operaciones@opisa.com');
             $this->email->cc($this->session->userdata('eMail'));
             $this->email->subject('Canje');
             $this->email->message($message);

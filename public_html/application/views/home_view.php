@@ -116,7 +116,7 @@
         <script src="assets/js/functions.js?ab"></script>
         <script src="assets/js/login.js?ab"></script>
         <script >
-            loadSection('cart_controller/getCategory','dvSecc');
+            loadSection('Cart_controller/getCategory','dvSecc');
         </script>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {

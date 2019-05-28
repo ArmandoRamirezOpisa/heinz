@@ -4,14 +4,18 @@
     	   
         public function __construct(){
             parent::__construct();
-            $this->load->model("login_model");
+            $this->load->model('Login_model');
         }
 		
 		public function login(){
-			$login = $this->login_model->login($_POST);
+            $loginHeinzData = array(
+                "user"=>$this->input->post('user'),
+                "pass"=>$this->input->post('pass')
+            );
+
+			$login = $this->Login_model->login($loginHeinzData);
 			if ($login)
 			{
-			    //Crea la session con los datos del usuario            
 				$userData = array(
 			       'logged_in' => TRUE,
                     'nombre' => $login[0]["PrimerNombre"]." ".$login[0]["ApellidoPaterno"],
@@ -29,12 +33,11 @@
                     'estado' => $login[0]["Estado"],
                     'administrador' => $login[0]["Administrador"]                                           
                 );
-				//Asigna el array con los datos del usuario a userdata
             	$this->session->set_userdata($userData);
-				$this->output->set_output(json_encode(true));//si encuantra al usuario regresa true
+				$this->output->set_output(json_encode($login));
 			}else{
-				$this->output->set_output(json_encode(false));//si no encuentra al usuario regresa false
-			}
+				$this->output->set_output(json_encode(false));
+            }
 		}
 	}
 ?>

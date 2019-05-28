@@ -2,8 +2,7 @@
 
     class Reglas_controller extends CI_Controller {
     
-    	public function index()
-    	{
+    	public function index(){
     		$this->load->view('reglas_view');
     	}
     }

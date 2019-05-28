@@ -1,34 +1,32 @@
-var server = "http://www.puntosheinz.com.mx/";
+var server = "http://puntosheinz.com.mx";
 
 function valLogin() {
-    var user = $('#usuario');
-    var pass = $('#password');
-
-    if (!(fieldOK(user) && fieldOK(pass))) {
+    var user = $('#usuario').val();
+    var pass = $('#password').val();
+    if (user == "" || pass == "") {
         $.notify("Campos obligatorios", "error");
-        return;
-    }
-    $.ajax({
-        url: 'login_controller/login',
-        type: 'POST',
-        dataType: 'json',
-        async: 'true',
-        data: { "usuario": $("#usuario").val(), "password": $("#password").val() },
-        success: function(result) {
-
-            if (result) {
-                //console.log("Session start");
-                window.location.reload();
-            } else {
-                //console.log("Error login");
-                $.notify("Los datos ingresados son incorrectos", "error");
+    } else {
+        $.ajax({
+            url: server + '/Login_controller/login',
+            type: 'POST',
+            dataType: 'json',
+            async: 'true',
+            data: {
+                "user": user,
+                "pass": pass
+            },
+            success: function(result) {
+                if (result) {
+                    window.location.reload();
+                } else {
+                    $.notify("Los datos ingresados son incorrectos", "error");
+                }
+            },
+            error: function(error, xhr, ajaxOptions, thrownError) {
+                $.notify("Ha ocurrido un error de conexión", "error");
             }
-
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            $.notify("Ha ocurrido un error de conexión", "error");
-        }
-    });
+        });
+    }
 }
 
 
