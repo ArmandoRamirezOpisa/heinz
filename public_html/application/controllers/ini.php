@@ -2,6 +2,7 @@
 
     class Ini extends CI_Controller {
     
+        //Old version 2.1.4
     	public function index()
     	{  
             if ($this->session->userdata('logged_in'))
