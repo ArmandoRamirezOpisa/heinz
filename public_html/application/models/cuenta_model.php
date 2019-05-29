@@ -4,13 +4,8 @@
     	      public function __construct(){}
         
             public function getEdoCuenta(){
-    		      $query = $this->db->query("
-                        SELECT *
-                        FROM PartMovimientos 
-                        WHERE codPrograma = ".$this->session->userdata('programa')."
-                        AND codParticipante = ".$this->session->userdata('participante')."
-                        AND codEmpresa = ".$this->session->userdata('empresa')."
-                        ORDER BY Act_Fecha DESC                
+                  $query = $this->db->query("
+                        CALL spu_hzGetEdoCuenta(".$this->session->userdata('programa').",".$this->session->userdata('participante').",".$this->session->userdata('empresa').");
                   ");
     		      if ($query->num_rows() > 0){
                         return $query->result_array(); 
