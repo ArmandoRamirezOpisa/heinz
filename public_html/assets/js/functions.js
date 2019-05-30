@@ -82,7 +82,7 @@ function addItemOrder(idProduct, name, puntos) {
 function refreshCar() {
     $.each(contOrder, function(k, v) {
         if ($("#in" + v.id).val() == 0) {
-            alert("La cantidad indicada debe ser mayor a cero");
+            console.log("La cantidad indicada debe ser mayor a cero");
         } else {
             v.cantidad = $("#in" + v.id).val();
         }
@@ -118,7 +118,6 @@ function deleteItem(item1) {
     var item = item1.id;
     var itemArray = item.split("-");
     var itemNum = itemArray[0];
-    console.log(itemNum);
     $.each(contOrder, function(k, v) {
         if (itemNum == v.id) {
             contOrder.splice(k, 1);
@@ -167,24 +166,20 @@ function sendCanje($ptsUser, $ptsCanje) {
                     },
                     success: function(response) {
                         if (response) {
-                            console.log(response);
-                            //$("#btnFinalizarCompraHeinz").hide();
-                            //$('#lblProc').hide();
-                            //$.notify("La solicitud de canje ha sido almacenada .", "success");
+                            $("#btnFinalizarCompraHeinz").hide();
+                            $('#lblProc').hide();
+                            $.notify("La solicitud de canje ha sido almacenada .", "success");
                         } else if (response == "ceroCanjes") {
-                            console.log(response);
-                            //$.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
-                            //var el = document.getElementById('btn');
-                            //el.parentNode.removeChild(el);
+                            $.notify("Has sobrepasado el tiempo para poder canjear tus puntos .", "success");
+                            var el = document.getElementById('btn');
+                            el.parentNode.removeChild(el);
                         } else if (response == "0") {
-                            console.log(response);
-                            //$.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
-                            //$("#btnGenCanje").show();
-                            //$("#lblProc").hide();
+                            $.notify("A ocurrido un error de comunicación. Intente nuevamente.", "error");
+                            $("#btnGenCanje").show();
+                            $("#lblProc").hide();
                         }
                     },
                     error: function(x, e) {
-                        console.log("Ocurrio un error al realizar el canje:" + e, x);
                         $("#btnGenCanje").show();
                         $("#lblProc").hide();
                     }
