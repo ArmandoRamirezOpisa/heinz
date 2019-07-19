@@ -1,11 +1,8 @@
-
 <?php
         class Admin extends CI_Model {
                 
                 public function __construct(){}
-        
-
-     
+             
                 public function misCanjesRealizados(){
                         $query=$this->db->query("                                   
                                 CALL spu_hzMisCanjesRealizados;
@@ -38,7 +35,7 @@
 			$nItem = 1;
 			foreach($datos as $d){
 	    		        $query = $this->db->query("
-                                        INSERT INTO CanjeDetalle (idParticipante,noFolio,idPreCanjeDet,CodPremio,
+                                        INSERT INTO CanjeDetalle (idParticipante,idCanje,idPreCanjeDet,CodPremio,
                                         cantidad,PuntosXUnidad)
 	    				VALUES (".$this->session->userdata('idPart').",".$noFolio.",".$nItem.",".$d->id.",".$d->cantidad.",".$d->puntos."/".$d->cantidad.")
 	                        ");
@@ -70,7 +67,7 @@
                                 SELECT p.idCanje,p.feSolicitud,d.Cantidad,pr.Nombre_Esp,d.Status,d.Mensajeria,
                                 d.NumeroGuia,d.Cantidad*d.PuntosXUnidad *-1 as puntos
                                 FROM Canje p
-                                INNER JOIN CanjeDetalle d on d.noFolio = p.idCanje
+                                INNER JOIN CanjeDetalle d on d.idCanje = p.idCanje
                                 INNER join Premio pr ON pr.codPremio = d.CodPremio 
                                 WHERE  
                                 p.codPrograma = ".$this->session->userdata('programa')."
@@ -78,8 +75,8 @@
                                 UNION ALL 
                                 SELECT p.NoFolio as idCanje, p.feMov as feSolicitud,null as Cantidad, 
                                 dsMov as Nombre_Esp, '-' as Status,'-' as Mensajeria,'-' as NumeroGuia,noPuntos as puntos 
-								from PartMovsRealizados p  
-								where p.idParticipante = ".$this->session->userdata('idPart')."
+                                from PartMovsRealizados p
+                                where p.idParticipante = ".$this->session->userdata('idPart')."
                                 ORDER BY 2,1
                         ");
                         if ($query->num_rows() > 0){
@@ -96,8 +93,8 @@
                                 ,d.codPremio, d.Cantidad, pr.Nombre_Esp as Premio, 
                                 d.PuntosXUnidad*d.Cantidad as Puntos,d.PuntosXUnidad*d.Cantidad*0.0159 as Total
                                 FROM opisa_opisa.Canje c 
-                                JOIN opisa_opisa.CanjeDetalle d on c.idParticipante=d.idParticipante 
-                                and c.idCanje=d.noFolio
+                                JOIN opisa_opisa.CanjeDetalle d on c.codPrograma=d.codPrograma
+                                and c.idCanje=d.idCanke
                                 JOIN opisa_opisa.Participante p on p.idParticipante=c.idParticipante
                                 JOIN opisa_opisa.Empresa e on e.codPrograma=p.codPrograma 
                                 and e.codEmpresa=p.codEmpresa
@@ -116,12 +113,12 @@
     		        $query = $this->db->query("
                                 SELECT pc.idCanje as Folio,p.codEmpresa,p.codParticipante,
                                 pc.feSolicitud as Fecha,pd.Status as Estatus,pd.Mensajeria,
-                                pd.NumeroGuia as Guias,pd.noFolio as FolioWeb,pd.codPremio,pd.Cantidad,
+                                pd.NumeroGuia as Guias,pd.idCanje as FolioWeb,pd.codPremio,pd.Cantidad,
                                 pr.Nombre_Esp as Descripcion,pr.Marca,pd.PuntosXUnidad as Puntos,
-								pd.PuntosXUnidad*pd.Cantidad as Total
+                                pd.PuntosXUnidad*pd.Cantidad as Total
                                 FROM Canje pc
-                                INNER JOIN CanjeDetalle pd ON pd.noFolio = pc.idCanje 
-                                AND pd.idParticipante = pc.idParticipante
+                                INNER JOIN CanjeDetalle pd ON pd.idCanje = pc.idCanje 
+                                AND pd.codPrograma = pc.codPrograma
                                 INNER JOIN Participante p on p.idParticipante = pc.idParticipante
                                 INNER JOIN Premio pr on pr.codPremio = pd.codPremio
                                 WHERE pc.idParticipante = ".$this->session->userdata('idPart')." 
