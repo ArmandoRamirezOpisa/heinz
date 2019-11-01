@@ -1,4 +1,15 @@
-var server = "http://puntosheinz.com.mx";
+const server = "http://puntosheinz.com.mx";
+
+const password = document.getElementById('password');
+
+password.addEventListener("keyup", loginBtn);
+
+
+function loginBtn(event) {
+    if (event.keyCode == 13) {
+        valLogin();
+    }
+}
 
 function valLogin() {
     var user = $('#usuario').val();
