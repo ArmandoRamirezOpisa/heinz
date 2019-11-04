@@ -1,7 +1,9 @@
 const server = "http://puntosheinz.com.mx";
 
-const password = document.getElementById('password');
+const usuario = document.getElementById('usuario');
+usuario.addEventListener('keyup', loginBtn);
 
+const password = document.getElementById('password');
 password.addEventListener("keyup", loginBtn);
 
 
